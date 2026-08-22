@@ -1,0 +1,19 @@
+[package]
+name = "apex_decimal_core"
+version = "0.1.0"
+edition = "2021"
+authors = ["world-class-dev"]
+description = "Military-grade obfuscated fixed-point decimal engine for low-latency financial systems"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["extension-module"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

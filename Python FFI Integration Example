@@ -1,0 +1,12 @@
+from apex_decimal_core import ApexEngine
+
+# Initialize Military-Grade Core Engine
+engine = ApexEngine()
+
+# 1. Pack transaction: $1250.50000000 (1250 whole, 50000000 fractional)
+raw_stream = engine.pack_transaction(1250, 50000000)
+print(f"Obfuscated Payload Stream: {raw_stream}")
+
+# 2. Reverse Unpack & Verify with Zero Precision Loss
+integer_part, fraction_part = engine.unpack_and_verify(raw_stream)
+print(f"Verified Settlement: {integer_part}.{fraction_part:08d}")
