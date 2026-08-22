@@ -1,4 +1,4 @@
-// Fixed-Point Precision Vector yenye Decoy Stripping & Reverse Execution
+// Fixed-Point Precision Vector Decoy Stripping & Reverse Execution
 pub struct ObfuscatedPayload {
     pub raw_stream: Vec<i128>, // has real numbers and Decoy linked
 }
