@@ -4,23 +4,23 @@ pub struct ObfuscatedPayload {
 }
 
 impl ObfuscatedPayload {
-    // Inject Decoys na Badilisha Mfumo wa Stream
+    // Inject Decoys and change Stream system
     pub fn encode_value(real_value: i128, salt: i128) -> Vec<i128> {
         let scaled = real_value * 100_000_000; // Shift 8 Decimals
         let decoy1 = scaled ^ 0xDEADBEEF;       // Decoy Number 1
         let decoy2 = scaled.wrapping_add(salt); // Decoy Number 2
         
-        // Return Stream kutoka nyuma (Reverse) ikiwa na Decoy Primitives
+        // Return Stream to reverse (Reverse) with Decoy Primitives
         vec![decoy2, scaled, decoy1]
     }
 
-    // Execute Math kutoka nyuma (Reverse Processing) na kuruka Decoys
+    // Execute Math to bake back (Reverse Processing) and skip Decoys
     pub fn decode_and_compute_reverse(stream: &[i128]) -> i128 {
-        // Traversal kuanzia index ya mwisho kuelekea mwanzo (Reverse)
+        // Traversal from last index to beginning (Reverse)
         let mut target_val: i128 = 0;
         
         for val in stream.iter().rev() {
-            // Skim na Utambue Real Value kwa kutumia Bitwise Masking
+            // Skim and identify Real Value unsing Bitwise Masking
             if !Self::is_decoy(val) {
                 target_val = *val;
                 break;
