@@ -1,7 +1,7 @@
 use pyo3::prelude::*;
 
 const PRECISION_SCALE: i128 = 100_000_000; // 8 Decimal Places (1.00000000)
-const DECOY_MASK: i128 = 0x5A5A_A5A5_5A5A_A5A5; // Bitwise Signature ya kutambua Decoys
+const DECOY_MASK: i128 = 0x5A5A_A5A5_5A5A_A5A5; // Bitwise Signature for Decoys detection
 
 #[pyclass]
 pub struct ApexEngine {
@@ -32,7 +32,7 @@ impl ApexEngine {
     fn unpack_and_verify(&self, stream: Vec<i128>) -> PyResult<(i128, i128)> {
         let mut authentic_val: Option<i128> = None;
 
-        // Traverse Stream REVERSEALLY (Kuanzia Nyuma kuelekea Mbele)
+        // Traverse Stream REVERSEALLY (from back to front)
         for chunk in stream.iter().rev() {
             // Skim away decoys via Obfuscation Logic
             if !self.is_decoy(*chunk) {
