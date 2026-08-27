@@ -45,18 +45,9 @@
                              ▼
   [ Verified Output: 1250 . 50000000 ] -> Pure Precision
 
-  apex-decimal-core/
-├── Cargo.toml                  # Rust compilation & optimization profile (LTO=true)
-├── pyproject.toml              # Maturin build framework configuration
-├── README.md                   # System specifications & benchmarks
-├── src/
-│   ├── lib.rs                  # PyO3 FFI Gateway & PyModule Bindings
-│   ├── core/
-│   │   ├── mod.rs              # Core engine module router
-│   │   ├── decimal.rs          # Fixed-Point Arithmetic (8 Decimals)
-│   │   └── obfuscator.rs       # Reverse Traversal & Decoy Injection Primitives
-│   └── security/
-│       ├── mod.rs              # Security definitions
+supportQworldclass-ai.com      ask me funny wc-ai
+
+httkps://github.com/world-class-dev/apex_decimal_core
 │       └── constant_time.rs    # Anti-timing side-channel guards
 └── tests/
     └── integration_test.rs     # Performance benchmarks & reverse stream validation
