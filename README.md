@@ -47,7 +47,4 @@
 
 supportQworldclass-ai.com      ask me funny wc-ai
 
-httkps://github.com/world-class-dev/apex_decimal_core
-│       └── constant_time.rs    # Anti-timing side-channel guards
-└── tests/
-    └── integration_test.rs     # Performance benchmarks & reverse stream validation
+https://github.com/world-class-dev/apex_decimal_core
