@@ -45,6 +45,6 @@
                              ▼
   [ Verified Output: 1250 . 50000000 ] -> Pure Precision
 
-supportQworldclass-ai.com      ask me funny wc-ai
+support@worldclass-ai.com      ask me funny wc-ai
 
 https://github.com/world-class-dev/apex_decimal_core
